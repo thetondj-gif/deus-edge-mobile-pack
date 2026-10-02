@@ -28,6 +28,10 @@ Open **Agent Skills → + → Load skill from URL** and use a skill folder URL s
 
 Repeat only for the skills you actually want active. Google AI Edge Gallery has a tight mobile context window; a focused pack is more reliable than hundreds of visible tools.
 
+## Agent Chat compatibility
+
+Use **Gemma-4-E2B-it** or **Gemma-4-E4B-it** for Agent Chat. On an 8 GB device use E2B. Do not assume an imported/custom model is tool-call compatible merely because Gallery lets it appear under Agent Chat. Keep Gallery's default Agent Chat system prompt. See `AI-EDGE-COMPATIBILITY.md`.
+
 ## MCP
 
 Use the private Founder MCP as the main tool plane. Add n8n MCP only when you want direct workflow building/execution from the phone, and disable unneeded n8n tools per session.
