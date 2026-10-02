@@ -9,29 +9,86 @@ body{margin:0}.wrap{max-width:980px;margin:auto;padding:56px 22px 80px}
 .kicker{letter-spacing:.18em;text-transform:uppercase;color:#aaa;font-size:.75rem}
 h1{font-size:clamp(2.5rem,7vw,5.8rem);line-height:.93;margin:.5rem 0 1rem;max-width:900px}
 .lead{font-size:1.15rem;line-height:1.6;color:#c9c6bd;max-width:760px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:42px}
+.install-note{margin:30px 0 0;border:1px solid #32343a;border-radius:16px;padding:18px 20px;background:#111216;line-height:1.55;color:#c9c6bd}
+.install-note strong{color:#f4f1e8}.steps{margin:.55rem 0 0;padding-left:1.2rem}.steps li{margin:.32rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:28px}
 .card{border:1px solid #2c2e33;border-radius:16px;padding:20px;background:#121317}
 .card h2{font-size:1.05rem;margin:.2rem 0 .6rem}.card p{color:#aaa;line-height:1.45;font-size:.93rem}
-.card a{color:#f4f1e8;text-decoration:none;border-bottom:1px solid #666}
+.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.install-btn{appearance:none;border:1px solid #f4f1e8;background:#f4f1e8;color:#0c0d0f;border-radius:999px;padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}
+.source-link{color:#c9c6bd;text-decoration:none;border-bottom:1px solid #666;padding-bottom:2px}
 .note{margin-top:38px;border-left:2px solid #ddd;padding:10px 0 10px 18px;color:#bbb;line-height:1.55}
 code{font-size:.85em} footer{margin-top:52px;color:#777;font-size:.85rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#f4f1e8;color:#0c0d0f;padding:11px 15px;border-radius:999px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .18s;z-index:10;max-width:calc(100vw - 36px);text-align:center}
+.toast.show{opacity:1}
 </style>
 </head>
 <body><main class="wrap">
 <div class="kicker">Deus Intus × Google AI Edge Gallery</div>
 <h1>Local intelligence.<br>Real tools.<br>Your system.</h1>
 <p class="lead">A focused mobile skill pack that keeps inference on-device and routes substantial work into the Deus Founder MCP, specialist agents and deterministic n8n workflows.</p>
+
+<div class="install-note">
+<strong>Install a skill in AI Edge Gallery</strong>
+<ol class="steps">
+<li>Tap <strong>Use in Gallery</strong>. The correct skill-folder URL is copied and Gallery opens.</li>
+<li>In Gallery open <strong>Skills → + → Load skill from URL</strong>.</li>
+<li>Paste the copied URL and tap <strong>Add</strong>.</li>
+</ol>
+</div>
+
 <section class="grid">
-<div class="card"><h2>Founder Command</h2><p>Estate search, context and specialist delegation.</p><a href="skills/deus-founder-command/SKILL.md">View skill</a></div>
-<div class="card"><h2>DeusIntus.com</h2><p>Consumer brand, ecommerce, collections, knowledge and creative.</p><a href="skills/deus-brand-com/SKILL.md">View skill</a></div>
-<div class="card"><h2>DeusIntus.co.uk</h2><p>Dedicated UK-market brand and commercial operator.</p><a href="skills/deus-brand-co-uk/SKILL.md">View skill</a></div>
-<div class="card"><h2>n8n Shortcuts</h2><p>Voice-friendly routes into the useful founder workflows.</p><a href="skills/deus-n8n-shortcuts/SKILL.md">View skill</a></div>
-<div class="card"><h2>Google Workspace</h2><p>Native-first Calendar/Gmail with deeper workflow automation.</p><a href="skills/deus-google-workspace/SKILL.md">View skill</a></div>
-<div class="card"><h2>Research</h2><p>Canonical estate knowledge plus current public evidence.</p><a href="skills/deus-research-intel/SKILL.md">View skill</a></div>
-<div class="card"><h2>Build & Launch</h2><p>Apps, pages, funnels and MVPs through existing builders.</p><a href="skills/deus-build-launch/SKILL.md">View skill</a></div>
-<div class="card"><h2>Content Engine</h2><p>SEO, social, email and video from real system evidence.</p><a href="skills/deus-content-engine/SKILL.md">View skill</a></div>
-<div class="card"><h2>Opportunity & Revenue</h2><p>Leads, grants, tenders, outreach and marketplace signals.</p><a href="skills/deus-opportunity-revenue/SKILL.md">View skill</a></div>
+<div class="card"><h2>Founder Command</h2><p>Estate search, context and specialist delegation.</p><div class="actions"><button class="install-btn" data-skill="deus-founder-command">Use in Gallery</button><a class="source-link" href="skills/deus-founder-command/SKILL.md">View source</a></div></div>
+<div class="card"><h2>DeusIntus.com</h2><p>Consumer brand, ecommerce, collections, knowledge and creative.</p><div class="actions"><button class="install-btn" data-skill="deus-brand-com">Use in Gallery</button><a class="source-link" href="skills/deus-brand-com/SKILL.md">View source</a></div></div>
+<div class="card"><h2>DeusIntus.co.uk</h2><p>Dedicated UK-market brand and commercial operator.</p><div class="actions"><button class="install-btn" data-skill="deus-brand-co-uk">Use in Gallery</button><a class="source-link" href="skills/deus-brand-co-uk/SKILL.md">View source</a></div></div>
+<div class="card"><h2>n8n Shortcuts</h2><p>Voice-friendly routes into the useful founder workflows.</p><div class="actions"><button class="install-btn" data-skill="deus-n8n-shortcuts">Use in Gallery</button><a class="source-link" href="skills/deus-n8n-shortcuts/SKILL.md">View source</a></div></div>
+<div class="card"><h2>Google Workspace</h2><p>Native-first Calendar/Gmail with deeper workflow automation.</p><div class="actions"><button class="install-btn" data-skill="deus-google-workspace">Use in Gallery</button><a class="source-link" href="skills/deus-google-workspace/SKILL.md">View source</a></div></div>
+<div class="card"><h2>Research</h2><p>Canonical estate knowledge plus current public evidence.</p><div class="actions"><button class="install-btn" data-skill="deus-research-intel">Use in Gallery</button><a class="source-link" href="skills/deus-research-intel/SKILL.md">View source</a></div></div>
+<div class="card"><h2>Build & Launch</h2><p>Apps, pages, funnels and MVPs through existing builders.</p><div class="actions"><button class="install-btn" data-skill="deus-build-launch">Use in Gallery</button><a class="source-link" href="skills/deus-build-launch/SKILL.md">View source</a></div></div>
+<div class="card"><h2>Content Engine</h2><p>SEO, social, email and video from real system evidence.</p><div class="actions"><button class="install-btn" data-skill="deus-content-engine">Use in Gallery</button><a class="source-link" href="skills/deus-content-engine/SKILL.md">View source</a></div></div>
+<div class="card"><h2>Opportunity & Revenue</h2><p>Leads, grants, tenders, outreach and marketplace signals.</p><div class="actions"><button class="install-btn" data-skill="deus-opportunity-revenue">Use in Gallery</button><a class="source-link" href="skills/deus-opportunity-revenue/SKILL.md">View source</a></div></div>
 </section>
-<div class="note"><strong>Agent Chat model:</strong> use Gemma-4-E2B-it or E4B-it. On 8 GB devices use E2B. Raw <code>&lt;|tool_call&gt;</code>, <code>run_mcp_tool</code> or repeated <code>print(result)</code> means the selected model/tool template is incompatible with Gallery Agent Chat.<br><br><a href="AI-EDGE-COMPATIBILITY.md">Compatibility guide →</a><br><br><strong>Why a small pack?</strong> AI Edge Gallery dynamically injects tool and skill metadata into a limited mobile context. The best architecture is a small number of high-level skills with the long tail kept behind MCP and specialist agents.<br><br><a href="COMPANION-SKILLS.md">Recommended companion skills →</a></div>
+
+<div class="note"><strong>Agent Chat model:</strong> use Gemma-4-E2B-it or E4B-it. On 8 GB devices use E2B. Raw <code>&lt;|tool_call&gt;</code>, <code>run_mcp_tool</code> or repeated <code>print(result)</code> means the selected model/tool template is incompatible with Gallery Agent Chat.<br><br><a class="source-link" href="AI-EDGE-COMPATIBILITY.md">Compatibility guide →</a><br><br><strong>Why a small pack?</strong> AI Edge Gallery dynamically injects tool and skill metadata into a limited mobile context. The best architecture is a small number of high-level skills with the long tail kept behind MCP and specialist agents.<br><br><a class="source-link" href="COMPANION-SKILLS.md">Recommended companion skills →</a></div>
 <footer>Deus Edge Mobile Pack · no credentials are shipped in this repository.</footer>
-</main></body></html>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Skill URL copied — opening AI Edge Gallery…</div>
+<script>
+const base = 'https://thetondj-gif.github.io/deus-edge-mobile-pack/skills/';
+const galleryDeepLink = 'com.google.ai.edge.gallery://llm_agent_chat/';
+const toast = document.getElementById('toast');
+
+async function installSkill(name) {
+  const url = base + name;
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(url);
+    copied = true;
+  } catch (_) {
+    const el = document.createElement('textarea');
+    el.value = url;
+    el.setAttribute('readonly', '');
+    el.style.position = 'fixed';
+    el.style.opacity = '0';
+    document.body.appendChild(el);
+    el.select();
+    copied = document.execCommand('copy');
+    el.remove();
+  }
+
+  toast.textContent = copied
+    ? 'Skill URL copied — opening AI Edge Gallery…'
+    : 'Open Gallery, then paste this skill URL: ' + url;
+  toast.classList.add('show');
+
+  if (copied) {
+    setTimeout(() => { window.location.href = galleryDeepLink; }, 350);
+  }
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+document.querySelectorAll('.install-btn').forEach(btn => {
+  btn.addEventListener('click', () => installSkill(btn.dataset.skill));
+});
+</script>
+</body></html>
