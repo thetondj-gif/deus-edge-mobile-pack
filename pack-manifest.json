@@ -1,0 +1,21 @@
+{
+  "name": "Deus Edge Mobile Pack",
+  "version": "1.0.0",
+  "target": "Google AI Edge Gallery",
+  "skills": [
+    "deus-founder-command",
+    "deus-brand-com",
+    "deus-brand-co-uk",
+    "deus-n8n-shortcuts",
+    "deus-google-workspace",
+    "deus-research-intel",
+    "deus-build-launch",
+    "deus-content-engine",
+    "deus-opportunity-revenue"
+  ],
+  "private_mcp": {
+    "founder_profile": "/mcp/mobile",
+    "n8n": "/n8n-mcp"
+  },
+  "credentials_in_repo": false
+}
