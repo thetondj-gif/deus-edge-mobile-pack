@@ -6,25 +6,24 @@ metadata:
 ---
 # Deus n8n Shortcuts
 
-Use the connected n8n MCP server for workflow discovery and execution.
+For the curated founder workflows, prefer the private Founder MCP tool `deus_n8n_shortcut`. It hides n8n implementation detail, keeps the phone tool context small and requires no n8n credential on the phone.
 
-## Rule
-Call `search_workflows` first when the workflow state is uncertain. Check `availableInMCP`.
-Use `get_workflow_details` with detailLevel=execution before first execution to learn trigger name/input shape.
-Use `execute_workflow` in production mode for published workflows; pass the exact webhook trigger name and body for webhook workflows.
-After starting, use execution-status tooling when the result matters.
+## Shortcut mapping
+- "route this request" -> request_router
+- "research this decision" -> research_decision
+- "turn this idea into an offer/funnel" -> idea_offer_funnel
+- "make outreach for this opportunity" -> opportunity_outreach
+- "build an app" -> app_builder
+- "build this outcome" -> outcome_foundry
+- "make/render an image" -> creative_generate
+- "turn this config into content" -> content_hype
+- "run marketplace factory" -> marketplace_factory
+- "assess this grant portfolio" -> grant_assess
 
-## Founder shortcuts
-- "build an app" -> deusOutcomeFoundryBuild01 or deusAppBuilder01
-- "make/render an image" -> deusCreativeRouter01
-- "turn this config into content" -> deusConfigContentHype01
-- "research this decision" -> deusPersonalResearchDecisionBrief01
-- "turn this idea into an offer/funnel" -> deusPersonalIdeaOfferFunnel01
-- "make outreach for this opportunity" -> deusPersonalOpportunityOutreachPack01
-- "run marketplace factory" -> deusMarketplaceFactory01
-- "commission YouTube from signals" -> deusYouTubeSignalCommissioning01
-- "scan Reddit leads" -> deusRedditIntel01
-- "assess this grant portfolio" -> deusGrantPortfolioAssess01
+Pass the user's supplied data as the shortcut payload. Never invent missing business facts.
 
-Do not expose maintenance/watchdog/backup workflows as normal user shortcuts.
-If direct execution is unavailable, route the job through the Founder MCP to the automation specialist rather than pretending it ran.
+## Direct n8n MCP
+Use the separate n8n MCP server only for advanced workflow discovery, building, editing, testing, agent management or execution outside the curated shortcuts.
+For direct n8n use: search first, inspect execution detail before first run, and verify the resulting execution.
+
+Do not expose maintenance, backup or watchdog workflows as normal mobile shortcuts.
