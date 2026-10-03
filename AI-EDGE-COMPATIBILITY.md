@@ -12,9 +12,9 @@ Imported models may still appear in Agent Chat because Gallery currently registe
 
 ## System prompt
 
-Keep Google AI Edge Gallery's **default Agent Chat system prompt**.
+Use the compact prompt in `AGENT-CHAT-SYSTEM-PROMPT.txt`. It preserves Gallery's required placeholders (`___SKILLS___` and `___TOOLS___`) and runtime functions (`load_skill` and `runMcpTool`) while removing unnecessary prompt weight.
 
-Do not replace it with a Qwen/OpenAI/Claude tool-call template. Gallery expects its own runtime tools such as `runMcpTool` and `load_skill`; model-native strings such as `<|tool_call>`, `run_mcp_tool`, Python-style `print(result)`, or raw JSON tool wrappers are a compatibility failure, not a valid MCP result.
+Do not use a Qwen/OpenAI/Claude tool-call template. Model-native strings such as `<|tool_call>`, `run_mcp_tool`, Python-style `print(result)`, or raw JSON tool wrappers are a compatibility failure, not a valid MCP result.
 
 ## Deus MCP
 
@@ -22,7 +22,7 @@ Use:
 
 `https://anthons-mac-studio.tail8ff43e.ts.net/mobile-mcp`
 
-The mobile profile is intentionally small and now caps result size for AI Edge's tighter context.
+The mobile profile now exposes **one MCP tool only**: `deus_mobile_command`. It handles search, read, workflows, specialists, receipts and model status behind one schema and caps result size for AI Edge's tighter context.
 
 ## Healthy behaviour
 

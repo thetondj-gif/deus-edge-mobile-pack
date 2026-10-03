@@ -1,49 +1,27 @@
-# Deus Edge Mobile Pack
+# Deus Edge Mobile Pack v2
 
-A mobile-first founder/brand operating pack for Google AI Edge Gallery.
+A compact mobile control plane for Google AI Edge Gallery Agent Chat.
 
-## What this does
+## Core design
 
-The local on-device model stays the conversational front end. Skills load only when relevant. Heavy work routes through the private Deus Founder MCP, Agent DM specialists, or the existing n8n estate.
+- **3 skills only**: Founder Command, DeusIntus.com, DeusIntus.co.uk.
+- **1 MCP tool only**: `deus_mobile_command`.
+- Long-tail workflows, specialists and estate access remain behind that one tool.
+- Use **Gemma-4-E2B-it** on 8 GB devices.
+- Keep the Agent Chat prompt short; use `AGENT-CHAT-SYSTEM-PROMPT.txt`.
 
-This keeps the phone's tool context small while exposing a much larger capability estate behind a few deliberate interfaces.
+## Install
 
-## Pack
-
-- **deus-founder-command** — estate search, project context and specialist delegation.
-- **deus-brand-com** — dedicated deusintus.com consumer brand director.
-- **deus-brand-co-uk** — dedicated deusintus.co.uk / UK-market operator.
-- **deus-n8n-shortcuts** — voice-friendly access to the useful founder workflows.
-- **deus-google-workspace** — Calendar/Gmail native-first, deeper Workspace automation through Deus.
-- **deus-research-intel** — internal + live research and evidence.
-- **deus-build-launch** — app/site/funnel/MVP execution.
-- **deus-content-engine** — content/SEO/social/YouTube from real evidence.
-- **deus-opportunity-revenue** — leads, grants, tenders, outreach and marketplace signals.
-
-## Install on AI Edge Gallery
-
-Open **Agent Skills → + → Load skill from URL** and use a skill folder URL such as:
+Load these skill folders from **Agent Skills → + → Load skill from URL**:
 
 `https://thetondj-gif.github.io/deus-edge-mobile-pack/skills/deus-founder-command`
 
-Repeat only for the skills you actually want active. Google AI Edge Gallery has a tight mobile context window; a focused pack is more reliable than hundreds of visible tools.
+`https://thetondj-gif.github.io/deus-edge-mobile-pack/skills/deus-brand-com`
 
-## Agent Chat compatibility
+`https://thetondj-gif.github.io/deus-edge-mobile-pack/skills/deus-brand-co-uk`
 
-Use **Gemma-4-E2B-it** or **Gemma-4-E4B-it** for Agent Chat. On an 8 GB device use E2B. Do not assume an imported/custom model is tool-call compatible merely because Gallery lets it appear under Agent Chat. Keep Gallery's default Agent Chat system prompt. See `AI-EDGE-COMPATIBILITY.md`.
+MCP:
 
-## MCP
+`https://anthons-mac-studio.tail8ff43e.ts.net/mobile-mcp`
 
-Use the private Founder MCP as the main tool plane. Add n8n MCP only when you want direct workflow building/execution from the phone, and disable unneeded n8n tools per session.
-
-No credentials are stored in this repository.
-
-## Design principles
-
-- local inference first
-- skills for intent/routing
-- MCP for live tools/actions
-- n8n for deterministic workflows
-- specialists for deep work
-- verify outputs, don't trust completion assertions
-- reuse existing capabilities before building new ones
+Do not keep the old six Deus helper skills enabled alongside v2; their jobs are now folded into Founder Command.

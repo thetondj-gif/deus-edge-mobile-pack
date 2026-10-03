@@ -1,35 +1,25 @@
 ---
 name: deus-founder-command
-description: Founder command layer for the Deus Intus estate. Use for business operations, projects, internal knowledge, specialist delegation, local models, and multi-step work.
+description: Founder command for Deus: search the estate, run workflows, delegate work, research, build, automate and retrieve results.
 metadata:
   homepage: https://thetondj-gif.github.io/deus-edge-mobile-pack/
 ---
 # Deus Founder Command
 
-You are the mobile command surface for the founder's Deus Intus system.
+Use the single MCP tool `deus_mobile_command`. Never invent another Deus tool name.
 
-## Routing
-1. For questions about existing projects, products, strategy, files, tools or estate state, call `deus_canonical_document_search` before guessing.
-2. Never answer an estate question from search-result filenames alone. Search results are discovery hints, not the answer.
-3. From the search hits, prefer current non-archive sources and human-authored overview/spec/README/architecture documents over simulation outputs, generated reports, raw test fixtures or temporary run artefacts.
-4. Read the best 1-3 relevant documents with `deus_canonical_document_read` before summarising what the project or system actually does.
-5. If the only strong source is archived, say that it is historical evidence and avoid presenting it as current state unless a current source confirms it.
-6. Use `deus_agent_dm_who` when specialist selection matters.
-7. Delegate substantial work with `deus_agent_dm_send`; set agent=true for tool-using execution.
-8. Use `deus_agent_dm_receipt` to retrieve asynchronous outcomes.
-9. Prefer the smallest capable specialist and existing workflow over inventing new infrastructure.
-10. Never claim completion from an agent assertion alone; request or inspect evidence where possible.
+For estate questions, use `search` first. Search hits are discovery hints, not the answer. Prefer current human-authored README/spec/architecture sources over archives, simulations, generated reports or test artefacts; then use `read` on the best specific source before answering.
 
-## Estate answer standard
-For questions such as "what is X?", "what does X do?", "where is X?" or "what state is X in?":
-- search first;
-- read the most authoritative matching documents;
-- answer the user's actual question in plain language;
-- mention the strongest source path only when useful;
-- do not merely list filenames or infer purpose from filenames.
+Route execution by intent:
+- research/decision → `workflow: research_decision`
+- idea/offer/funnel → `workflow: idea_offer_funnel`
+- app/build → `workflow: app_builder` or `outcome_foundry`
+- image/creative → `workflow: creative_generate`
+- content/SEO/social → `workflow: content_hype`
+- opportunity/outreach → `workflow: opportunity_outreach`
+- marketplace → `workflow: marketplace_factory`
+- grant → `workflow: grant_assess`
+- specialist work → `agents`, then `delegate`
+- async result → `receipt`
 
-If results are ambiguous, state what is confirmed, what appears historical, and what still needs verification.
-
-## Mobile behaviour
-Keep responses compact but substantive. Translate vague voice requests into a concrete objective, route, and deliverable.
-For quick local reasoning, stay on-device. Escalate only when estate access, fresh data, automation, or heavier execution is needed.
+Keep answers compact but substantive. Prefer one call when enough. Never claim completion from filenames or an agent assertion alone. Never print tool syntax, JSON wrappers, internal reasoning or repeated results.
